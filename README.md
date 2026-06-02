@@ -26,9 +26,9 @@ Requires **Node.js ≥ 14**.
 ## Quick Start
 
 ```js
-const DataDumper = require("fetchify");
+const FetchifyClient = require("fetchify");
 
-const client = new DataDumper("https://jsonplaceholder.typicode.com");
+const client = new FetchifyClient("https://jsonplaceholder.typicode.com");
 
 (async () => {
   const { body, error, statusCode } = await client.syncAPIRequest({
@@ -47,7 +47,7 @@ const client = new DataDumper("https://jsonplaceholder.typicode.com");
 
 ## API
 
-### `new DataDumper(url, [method], [headers])`
+### `new FetchifyClient(url, [method], [headers])`
 
 Creates a reusable client instance with default request parameters.
 
@@ -58,7 +58,7 @@ Creates a reusable client instance with default request parameters.
 | `headers` | Object | `{ 'Content-Type': 'application/json' }` | Default request headers.                    |
 
 ```js
-const client = new DataDumper("https://api.example.com", "POST", {
+const client = new FetchifyClient("https://api.example.com", "POST", {
   "Content-Type": "application/json",
   Authorization: "Bearer TOKEN",
 });
@@ -110,7 +110,7 @@ Always resolves with:
 ### GET request
 
 ```js
-const client = new DataDumper("https://api.example.com");
+const client = new FetchifyClient("https://api.example.com");
 
 const { body, statusCode } = await client.syncAPIRequest({
   url: "https://api.example.com/users/42",
@@ -122,7 +122,7 @@ console.log(statusCode, body);
 ### POST request with a body
 
 ```js
-const client = new DataDumper("https://api.example.com", "POST");
+const client = new FetchifyClient("https://api.example.com", "POST");
 
 const { body, error } = await client.syncAPIRequest({
   body: { name: "Alice", role: "admin" },
@@ -134,7 +134,7 @@ if (!error) console.log("Created:", body);
 ### Override the method per-call
 
 ```js
-const client = new DataDumper("https://api.example.com");
+const client = new FetchifyClient("https://api.example.com");
 
 // Default is GET, but override for this call:
 const { body } = await client.syncAPIRequest({
