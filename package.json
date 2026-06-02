@@ -1,0 +1,23 @@
+{
+  "name": "fetchify",
+  "version": "2.0.0",
+  "description": "Zero-dependency promise-based HTTP/HTTPS client for Node.js",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "http",
+    "request",
+    "api",
+    "client",
+    "fetch"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurneet13/fetchify.git"
+  },
+  "author": "gurneet13",
+  "bugs": {
+    "url": "https://github.com/gurneet13/fetchify/issues"
+  },
+  "homepage": "https://github.com/gurneet13/fetchify#readme"
+}
