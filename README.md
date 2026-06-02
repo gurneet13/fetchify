@@ -2,8 +2,8 @@
 
 > A zero-dependency, promise-based HTTP/HTTPS client for Node.js.
 
-[![npm version](https://img.shields.io/npm/v/resolvo.svg)](https://www.npmjs.com/package/resolvo)
-[![license](https://img.shields.io/npm/l/resolvo.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@gurneet13/resolvo.svg)](https://www.npmjs.com/package/@gurneet13/resolvo)
+[![license](https://img.shields.io/npm/l/@gurneet13/resolvo.svg)](LICENSE)
 
 ---
 
@@ -16,7 +16,7 @@
 ## Installation
 
 ```bash
-npm install resolvo
+npm install @gurneet13/resolvo
 ```
 
 Requires **Node.js ≥ 14**.
