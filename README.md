@@ -1,22 +1,22 @@
-# data-dumper
+# fetchify
 
 > A zero-dependency, promise-based HTTP/HTTPS client for Node.js.
 
-[![npm version](https://img.shields.io/npm/v/data-dumper.svg)](https://www.npmjs.com/package/data-dumper)
-[![license](https://img.shields.io/npm/l/data-dumper.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/fetchify.svg)](https://www.npmjs.com/package/fetchify)
+[![license](https://img.shields.io/npm/l/fetchify.svg)](LICENSE)
 
 ---
 
 ## Why?
 
-`data-dumper` is a lightweight wrapper around Node's built-in `http`/`https` modules. No heavy dependencies, no `axios`, no `node-fetch` — just a clean class-based API that returns structured `{ body, error, statusCode }` objects so you never have to `try/catch` a network call again.
+`fetchify` is a lightweight wrapper around Node's built-in `http`/`https` modules. No heavy dependencies, no `axios`, no `node-fetch` — just a clean class-based API that returns structured `{ body, error, statusCode }` objects so you never have to `try/catch` a network call again.
 
 ---
 
 ## Installation
 
 ```bash
-npm install data-dumper
+npm install fetchify
 ```
 
 Requires **Node.js ≥ 14**.
@@ -26,7 +26,7 @@ Requires **Node.js ≥ 14**.
 ## Quick Start
 
 ```js
-const DataDumper = require("data-dumper");
+const DataDumper = require("fetchify");
 
 const client = new DataDumper("https://jsonplaceholder.typicode.com");
 
