@@ -1,5 +1,5 @@
 {
-  "name": "fetchify",
+  "name": "resolvo",
   "version": "1.0.0",
   "description": "Zero-dependency promise-based HTTP/HTTPS client for Node.js",
   "main": "index.js",
