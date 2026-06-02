@@ -13,11 +13,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gurneet13/fetchify.git"
+    "url": "git+https://github.com/gurneet13/resolvo.git"
   },
   "author": "gurneet13",
   "bugs": {
-    "url": "https://github.com/gurneet13/fetchify/issues"
+    "url": "https://github.com/gurneet13/resolvo/issues"
   },
-  "homepage": "https://github.com/gurneet13/fetchify#readme"
+  "homepage": "https://github.com/gurneet13/resolvo#readme"
 }

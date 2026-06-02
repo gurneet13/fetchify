@@ -1,22 +1,22 @@
-# fetchify
+# resolvo
 
 > A zero-dependency, promise-based HTTP/HTTPS client for Node.js.
 
-[![npm version](https://img.shields.io/npm/v/fetchify.svg)](https://www.npmjs.com/package/fetchify)
-[![license](https://img.shields.io/npm/l/fetchify.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/resolvo.svg)](https://www.npmjs.com/package/resolvo)
+[![license](https://img.shields.io/npm/l/resolvo.svg)](LICENSE)
 
 ---
 
 ## Why?
 
-`fetchify` is a lightweight wrapper around Node's built-in `http`/`https` modules. No heavy dependencies, no `axios`, no `node-fetch` — just a clean class-based API that returns structured `{ body, error, statusCode }` objects so you never have to `try/catch` a network call again.
+`resolvo` is a lightweight wrapper around Node's built-in `http`/`https` modules. No heavy dependencies, no `axios`, no `node-fetch` — just a clean class-based API that returns structured `{ body, error, statusCode }` objects so you never have to `try/catch` a network call again.
 
 ---
 
 ## Installation
 
 ```bash
-npm install fetchify
+npm install resolvo
 ```
 
 Requires **Node.js ≥ 14**.
@@ -26,9 +26,9 @@ Requires **Node.js ≥ 14**.
 ## Quick Start
 
 ```js
-const FetchifyClient = require("fetchify");
+const ResolvoClient = require("resolvo");
 
-const client = new FetchifyClient("https://jsonplaceholder.typicode.com");
+const client = new ResolvoClient("https://jsonplaceholder.typicode.com");
 
 (async () => {
   const { body, error, statusCode } = await client.syncAPIRequest({
@@ -47,7 +47,7 @@ const client = new FetchifyClient("https://jsonplaceholder.typicode.com");
 
 ## API
 
-### `new FetchifyClient(url, [method], [headers])`
+### `new ResolvoClient(url, [method], [headers])`
 
 Creates a reusable client instance with default request parameters.
 
@@ -58,7 +58,7 @@ Creates a reusable client instance with default request parameters.
 | `headers` | Object | `{ 'Content-Type': 'application/json' }` | Default request headers.                    |
 
 ```js
-const client = new FetchifyClient("https://api.example.com", "POST", {
+const client = new ResolvoClient("https://api.example.com", "POST", {
   "Content-Type": "application/json",
   Authorization: "Bearer TOKEN",
 });
@@ -110,7 +110,7 @@ Always resolves with:
 ### GET request
 
 ```js
-const client = new FetchifyClient("https://api.example.com");
+const client = new ResolvoClient("https://api.example.com");
 
 const { body, statusCode } = await client.syncAPIRequest({
   url: "https://api.example.com/users/42",
@@ -122,7 +122,7 @@ console.log(statusCode, body);
 ### POST request with a body
 
 ```js
-const client = new FetchifyClient("https://api.example.com", "POST");
+const client = new ResolvoClient("https://api.example.com", "POST");
 
 const { body, error } = await client.syncAPIRequest({
   body: { name: "Alice", role: "admin" },
@@ -134,7 +134,7 @@ if (!error) console.log("Created:", body);
 ### Override the method per-call
 
 ```js
-const client = new FetchifyClient("https://api.example.com");
+const client = new ResolvoClient("https://api.example.com");
 
 // Default is GET, but override for this call:
 const { body } = await client.syncAPIRequest({

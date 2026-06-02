@@ -7,9 +7,9 @@ const { URL } = require("url");
 const DEFAULT_HEADERS = { "Content-Type": "application/json" };
 
 /**
- * DataDumper — lightweight HTTP client for making API requests.
+ * Resolvo — lightweight HTTP client for making API requests.
  */
-class DataDumper {
+class Resolvo {
   /**
    * @param {string} url - Base URL for requests.
    * @param {string} [method='GET'] - HTTP method.
@@ -17,7 +17,7 @@ class DataDumper {
    */
   constructor(url, method = "GET", headers = DEFAULT_HEADERS) {
     if (!url || typeof url !== "string") {
-      throw new TypeError("DataDumper: `url` must be a non-empty string.");
+      throw new TypeError("Resolvo: `url` must be a non-empty string.");
     }
     this.url = url;
     this.method = method.toUpperCase();
@@ -101,4 +101,4 @@ class DataDumper {
   }
 }
 
-module.exports = DataDumper;
+module.exports = Resolvo;
